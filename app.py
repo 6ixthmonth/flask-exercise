@@ -74,3 +74,10 @@ with app.test_request_context():
 #     else:
 #         return show_the_login_form()
     
+# @app.get('/login')
+# def login_get():
+#     return show_the_login_form()
+
+# @app.post('/login')
+# def login_post():
+#     return do_the_login()
