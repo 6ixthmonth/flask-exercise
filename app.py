@@ -16,9 +16,9 @@ app = Flask(__name__)
 # def index():
 #     return 'Index Page'
 
-@app.route('/hello')
-def hello():
-    return 'Hello, World'
+# @app.route('/hello')
+# def hello():
+#     return 'Hello, World'
 
 from markupsafe import escape
 
@@ -83,3 +83,10 @@ with app.test_request_context():
 #     return do_the_login()
 
 url_for('static', filename='style.css')
+
+from flask import render_template
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('hello.html', name=name)
