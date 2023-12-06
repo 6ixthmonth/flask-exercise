@@ -1,1 +1,1 @@
-# flask-exercise
+# practice-flask
